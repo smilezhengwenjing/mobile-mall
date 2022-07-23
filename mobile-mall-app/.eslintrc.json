@@ -1,0 +1,42 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  // "plugin:import/typescript"：导入 ts|tsx 文件时，允许省略后缀
+  "extends": ["plugin:react/recommended", "airbnb", "plugin:import/typescript"],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "plugins": ["react", "@typescript-eslint"],
+  "rules": {
+    // 关闭 This line has a length of 129. Maximum allowed is 100.
+    "max-len": 0,
+    // 关闭 'webpack-merge' should be listed in the project's dependencies, not devDependencies.
+    "import/no-extraneous-dependencies": 0,
+    // 关闭 Unexpected use of file extension "js" for "./webpack.common.config.js"
+    "import/extensions": 0,
+    // 关闭 Function component is not a function declaration
+    "react/function-component-definition": [
+      2,
+      {
+        "namedComponents": "arrow-function",
+        "unnamedComponents": "arrow-function"
+      }
+    ],
+    // 关闭 JSX not allowed in files with extension '.tsx'
+    "react/jsx-filename-extension": [
+      "error",
+      { "extensions": [".ts", ".tsx", ".js", ".jsx"] }
+    ],
+    // 关闭 Unexpected block statement surrounding arrow body; move the returned value immediately after the `=>`.
+    "arrow-body-style": 0,
+    // 关闭结尾逗号校验
+    "comma-dangle": 0
+  }
+}
