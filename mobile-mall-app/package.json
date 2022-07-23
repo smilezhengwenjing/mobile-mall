@@ -7,7 +7,6 @@
     "start": "webpack serve --config ./config/webpack.dev.config.js",
     "build": "rimraf dist && webpack --config ./config/webpack.prod.config.js",
     "build:dev": "rimraf dist && webpack --config ./config/webpack.dev.config.js",
-    "prepare": "husky install",
     "test": "npx eslint ./src  --ext ts,tsx,js,jsx"
   },
   "author": "",
@@ -42,7 +41,6 @@
     "file-loader": "^6.2.0",
     "friendly-errors-webpack-plugin": "^1.7.0",
     "html-webpack-plugin": "^5.5.0",
-    "husky": "^8.0.1",
     "less": "^4.1.3",
     "less-loader": "^11.0.0",
     "mini-css-extract-plugin": "^2.6.1",
