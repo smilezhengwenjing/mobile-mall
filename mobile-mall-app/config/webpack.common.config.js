@@ -81,7 +81,7 @@ module.exports = {
     splitChunks: {
       cacheGroups: {
         vendor: {
-          test: /[\/]node_modules[\/]/,
+          test: /[/]node_modules[/]/,
           name: 'vendor',
           chunks: 'all',
         },
