@@ -52,6 +52,7 @@ export const RegisterWrapper = styled.div`
             border-radius:6px;
             padding: 0px 20px 2px;
             text-align:center;
+            cursor:pointer;
         }
     }
     .user-form-remind{
