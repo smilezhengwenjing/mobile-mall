@@ -72,10 +72,6 @@ module.exports = {
     },
     ]
   },
-  externals: {
-    react: 'React',
-    'react-dom': 'ReactDOM',
-  },
   // 缓存配置
   optimization: {
     splitChunks: {

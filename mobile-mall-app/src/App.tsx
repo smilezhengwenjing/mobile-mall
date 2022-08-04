@@ -1,8 +1,8 @@
 import React from 'react';
+import Test from '@/components/Test';
 import Home from './Home';
 import styles from './App.less';
 import TEST_IMG from './assets/images/1.jpg';
-import Test from '@/components/Test';
 
 const App = () => {
   return (

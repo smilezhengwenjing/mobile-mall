@@ -31,13 +31,22 @@
     ],
     // 关闭 JSX not allowed in files with extension '.tsx'
     "react/jsx-filename-extension": [
-      "off",
-      { "extensions": [".ts", ".tsx", ".js", ".jsx"] }
+      "error",
+      {
+        "extensions": [".ts", ".tsx", ".js", ".jsx"]
+      }
     ],
     // 关闭 Unexpected block statement surrounding arrow body; move the returned value immediately after the `=>`.
     "arrow-body-style": 0,
     // 关闭结尾逗号校验
     "comma-dangle": 0,
     "linebreak-style": ["error", "windows"]
+  },
+  "settings": {
+    "import/resolver": {
+      "webpack": {
+        "config": "./config/webpack.common.config.js"
+      }
+    }
   }
 }
