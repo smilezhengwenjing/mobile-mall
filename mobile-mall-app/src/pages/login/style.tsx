@@ -38,6 +38,10 @@ export const RegisterWrapper = styled.div`
             width:100%;
             height:100%;
         }
+        .form-control:focus{
+            border:1px solid #0085d0;
+            outline: 0;
+        }
         .form-control-button{
             box-sizing:border-box;
             background-color:#0085d0;
