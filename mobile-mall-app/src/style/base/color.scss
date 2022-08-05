@@ -1,0 +1,32 @@
+/* 字体颜色
+[font-primary] {
+  color: #333333
+}
+
+[font-secondary] {
+  color: #666666
+}
+...
+-------------------------- */
+
+
+@each $style in (primary $color-text-primary, secondary $color-text-secondary, tertiary $color-text-tertiary, quaternary $color-text-quaternary) {
+    [font-#{nth($style, 1)}] {
+        color: #{nth($style, 2)};
+    }
+}
+
+/* 背景颜色
+  [bg-primary] {
+    background-color: #F1F1F1;
+  }
+  [bg-secondary] {
+    background-color: #FFFFFF;
+  }
+  ...
+  -------------------------- */
+@each $style in (primary $background-color-primary, secondary $background-color-secondary, tertiary $background-color-tertiary) {
+    [bg-#{nth($style, 1)}] {
+        background-color: #{nth($style, 2)};
+    }
+}

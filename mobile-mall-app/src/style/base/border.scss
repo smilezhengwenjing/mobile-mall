@@ -1,0 +1,14 @@
+/* 边框
+[bor-base] {
+  border: 1px solid #E5E5E5;
+}
+-------------------------- */
+/* Border
+----------------------- */
+$border-width-base: 1Px;
+$border-style-base: solid;
+$border-base: $border-width-base $border-style-base $border-color-base;
+
+[bor-base] {
+    border: $border-base;
+}
