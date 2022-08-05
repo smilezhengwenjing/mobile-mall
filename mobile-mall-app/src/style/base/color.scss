@@ -25,6 +25,9 @@
   }
   ...
   -------------------------- */
+$background-color-primary: #F1F1F1;
+$background-color-secondary: $color-white;
+$background-color-tertiary: $color-primary;
 @each $style in (primary $background-color-primary, secondary $background-color-secondary, tertiary $background-color-tertiary) {
     [bg-#{nth($style, 1)}] {
         background-color: #{nth($style, 2)};

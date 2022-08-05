@@ -72,7 +72,7 @@ module.exports = merge(common, {
           },
         },
         'postcss-loader',
-        'less-loader',
+        'sass-loader',
       ],
     },
     ],
