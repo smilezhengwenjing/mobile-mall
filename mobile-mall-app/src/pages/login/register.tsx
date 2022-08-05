@@ -25,6 +25,7 @@ const Register = () => {
                 <input type="password" className="form-control" placeholder="请重复输入密码" />
               </div>
               <div className="user-form-user-form-input">
+                {/* eslint-disable-next-line react/button-has-type */}
                 <button className="form-control-button">注册</button>
               </div>
             </div>
