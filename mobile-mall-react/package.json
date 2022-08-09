@@ -130,6 +130,8 @@
     "axios": "^0.27.2",
     "craco": "0.0.3",
     "lodash": "^4.17.21",
-    "path-to-regexp": "^6.2.1"
+    "path-to-regexp": "^6.2.1",
+    "sass": "^1.54.3",
+    "sass-loader": "^13.0.2"
   }
 }
