@@ -3,6 +3,8 @@ import styled from 'styled-components';
 // eslint-disable-next-line import/prefer-default-export
 export const RegisterWrapper = styled.div`
     padding-top:30px;
+    width: 500px;
+    margin: 0 auto;
     .user-form-logo{
         width:450px;
         text-align:center;
