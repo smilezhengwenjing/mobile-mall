@@ -20,7 +20,7 @@ export const RegisterWrapper = styled.div`
             margin-bottom:20px;
         }
         .user-form-title h2{
-            color:#0085d0;
+            color:#3eb4fa;
         }
         .user-form-group__login{
            margin-bottom:20px;
@@ -46,7 +46,7 @@ export const RegisterWrapper = styled.div`
         }
         .form-control-button{
             box-sizing:border-box;
-            background-color:#0085d0;
+            background-color:#3eb4fa;
             color:white;
             width:100%;
             height:40px;

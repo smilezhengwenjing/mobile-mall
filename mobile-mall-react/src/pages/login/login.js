@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 import "@/style/base/bootstrap.scss";
-import logo from "@/assets/images/logo.png"
+import logo from "@/assets/images/logo.png";
+// import Particles from 'react-particles-js';
 
 export default class login extends Component {
   render() {
     return (
       <section className="user-form-part">
+      
         <div className="container">
             <div className="row justify-content-center">
                 <div className="col-12 col-sm-10 col-md-8 col-lg-6 col-xl-5">
