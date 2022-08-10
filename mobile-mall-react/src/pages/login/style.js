@@ -22,7 +22,7 @@ export const RegisterWrapper = styled.div`
         .user-form-title h2{
             color:#0085d0;
         }
-        .user-form-group{
+        .user-form-group__login{
            margin-bottom:20px;
         }
         .user-form-input{

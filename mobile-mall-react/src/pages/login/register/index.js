@@ -14,7 +14,7 @@ const Register = () => {
             <div className="user-form-title">
               <h2>Join Now!</h2>
             </div>
-            <div className="user-form-group">
+            <div className="user-form-group__login">
               <div className="user-form-input">
                 <input type="text" className="form-control" placeholder="请输入手机号" />
               </div>
@@ -32,7 +32,7 @@ const Register = () => {
           <div className="user-form-remind">
             <p>
               已创建账户?
-              <a href="blank">登录</a>
+              <a href="/login">登录</a>
             </p>
           </div>
         </div>

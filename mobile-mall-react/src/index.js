@@ -4,15 +4,13 @@ import './index.css';
 import App from './App';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-// root.render(
-//   <React.StrictMode>
-//     <App />
-//   </React.StrictMode>
-// );
-
-ReactDOM.render(
-  root.render(<App/>)
+root.render(
+    <App />
 );
+
+// ReactDOM.render(
+//   root.render(<App/>)
+// );
 
 
 // If you want to start measuring performance in your app, pass a function
