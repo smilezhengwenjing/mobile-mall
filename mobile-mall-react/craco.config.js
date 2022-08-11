@@ -1,6 +1,9 @@
 const path = require('path')
 
 module.exports = {
+  eslint: {
+    enable: false
+  },
   // webpack 配置
   webpack: {
     // 配置别名
