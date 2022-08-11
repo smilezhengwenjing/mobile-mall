@@ -13,7 +13,7 @@ export const RegisterWrapper = styled.div`
     .user-form-card{
         border:1px solid #e8e8e8;
         border-radius:8px;
-        padding:15px 30px 30px;
+        padding:30px;
         background:white;
         .user-form-title{
             text-align:center;
