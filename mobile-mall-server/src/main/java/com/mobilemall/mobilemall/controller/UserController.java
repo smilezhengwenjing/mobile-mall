@@ -14,6 +14,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
 import javax.validation.Valid;
+import java.util.HashMap;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/user")
@@ -31,7 +33,9 @@ public class UserController {
 
         //注册成功
         if (ServiceResultEnum.SUCCESS.getResult().equals(registerResult)) {
-            return ResultGenerator.genSuccessResult();
+            Map<String, Object> map = new HashMap<String, Object>();
+            map.put("loginName",userRegisterParam.getLoginName());
+            return ResultGenerator.genSuccessResult(map);
         }
         //注册失败
         return ResultGenerator.genFailResult(registerResult);

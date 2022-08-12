@@ -9,4 +9,5 @@ public interface UserService {
      * @return
      */
     String register(String loginName, String password);
+
 }

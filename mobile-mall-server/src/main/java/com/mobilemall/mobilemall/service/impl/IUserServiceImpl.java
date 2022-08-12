@@ -18,6 +18,7 @@ public class IUserServiceImpl implements UserService {
     private UserMapper userMapper;
     @Override
     public String register(String loginName, String password) {
+        System.out.println("----------"+userMapper.selectByLoginName(loginName));
         if (userMapper.selectByLoginName(loginName) != null) {
             return ServiceResultEnum.SAME_LOGIN_NAME_EXIST.getResult();
         }
