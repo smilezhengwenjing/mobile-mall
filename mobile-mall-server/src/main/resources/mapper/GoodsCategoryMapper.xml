@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mobilemall.mobilemall.mapper.GoodsCategoryMapper">
+    <resultMap id="BaseResultMap" type="com.mobilemall.mobilemall.entity.GoodsCategory">
+        <id column="category_id" jdbcType="BIGINT" property="categoryId"/>
+        <result column="category_level" jdbcType="TINYINT" property="categoryLevel"/>
+        <result column="parent_id" jdbcType="BIGINT" property="parentId"/>
+        <result column="category_name" jdbcType="VARCHAR" property="categoryName"/>
+        <result column="category_rank" jdbcType="INTEGER" property="categoryRank"/>
+        <result column="is_deleted" jdbcType="TINYINT" property="isDeleted"/>
+        <result column="create_time" jdbcType="TIMESTAMP" property="createTime"/>
+        <result column="create_user" jdbcType="INTEGER" property="createUser"/>
+        <result column="update_time" jdbcType="TIMESTAMP" property="updateTime"/>
+        <result column="update_user" jdbcType="INTEGER" property="updateUser"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+      category_id, category_level, parent_id, category_name, category_rank, is_deleted,
+      create_time, create_user, update_time, update_user
+    </sql>
+    <select id="selectAll" parameterType="Map" resultMap="BaseResultMap" >
+        select
+        <include refid="Base_Column_List"/>
+        from goods_category
+        where is_deleted = 0 and category_level = #{categoryLevel}
+    </select>
+</mapper>
