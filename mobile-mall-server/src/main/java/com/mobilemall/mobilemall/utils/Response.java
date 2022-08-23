@@ -1,5 +1,4 @@
 package com.mobilemall.mobilemall.utils;
-
 import java.util.Date;
 import java.util.Objects;
 
@@ -12,12 +11,14 @@ public class Response {
     private Integer code;
     private String msg;
     private String token;
+    private Object data;
 
 
-    public Response(Integer code, String msg, String token) {
+    public Response(Integer code, String msg, String token, Object data) {
         this.code = code;
         this.msg = msg;
         this.token = token;
+        this.data = data;
     }
 
     @Override
@@ -26,6 +27,7 @@ public class Response {
                 "code=" + code +
                 ", msg='" + msg + '\'' +
                 ", token='" + token + '\'' +
+                ", data='" + data + '\'' +
                 '}';
     }
 
@@ -53,6 +55,11 @@ public class Response {
         this.token = token;
     }
 
+    public Object getUser(Object data){
+        return data;
+    }
+
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -60,11 +67,13 @@ public class Response {
         Response response = (Response) o;
         return Objects.equals(code, response.code) &&
                 Objects.equals(msg, response.msg) &&
-                Objects.equals(token, response.token);
+                Objects.equals(token, response.token) &&
+                Objects.equals(data, response.data)
+                ;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(code, msg, token);
+        return Objects.hash(code, msg, token,data);
     }
 }

@@ -16,6 +16,7 @@ import javax.annotation.Resource;
 import javax.validation.Valid;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Objects;
 
 @RestController
 @RequestMapping("/user")
@@ -55,14 +56,15 @@ public class UserController {
         String pwd =  MD5Util.MD5Encode(userRegisterParam.getPassword(), "UTF-8");
         System.out.println("uname=" + uname + "pwd" + pwd);
         if (uname.equals("") || pwd.equals("")) {
-            return new Response(100, "用户名或密码不能为空", "");
+            return new Response(100, "用户名或密码不能为空", "",null);
         } else {
 //            String passwordMD5 = MD5Util.MD5Encode(pwd, "UTF-8");
             System.out.println(userMapper.login(uname, pwd));
             if (userMapper.login(uname, pwd) != null) {
-                return new Response(200, "操作成功", "");
+                return new Response(200, "操作成功", "",userMapper.login(uname, pwd));
             } else {
-                return new Response(500, "用户不存在/密码错误", "");
+                Object obj = null;
+                return new Response(500, "用户不存在/密码错误", "", obj);
             }
         }
     }
