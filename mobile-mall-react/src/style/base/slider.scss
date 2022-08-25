@@ -1,0 +1,61 @@
+.home-index-slider .dandik {
+    right: 30px
+}
+
+.home-index-slider .bamdik {
+    left: 30px
+}
+
+.home-index-slider .slick-dots {
+    bottom: 50px
+}
+.slider-arrow:hover .dandik,
+.slider-arrow:hover .bamdik {
+    visibility: visible;
+    opacity: 1
+}
+.slider-dots ul {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%)
+}
+
+.slider-dots ul li {
+    width: 25px;
+    height: 5px;
+    border-radius: 30px;
+    background: var(--chalk);
+    margin: 0px 8px;
+    display: inline-block;
+    cursor: pointer;
+    box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15)
+}
+
+.slider-dots ul li button {
+    display: none
+}
+
+.slider-dots ul li.slick-active {
+    background: var(--primary)
+}
+
+@media (max-width: 575px) {
+    .slider-dots ul {
+        bottom: 10px
+    }
+
+    .slider-dots ul li {
+        margin: 0px 6px
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+    .slider-dots ul {
+        bottom: 20px
+    }
+
+    .slider-dots ul li {
+        margin: 0px 6px
+    }
+}

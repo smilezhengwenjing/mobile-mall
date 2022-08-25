@@ -1,0 +1,387 @@
+.navbar-part {
+    background: var(--white)
+}
+
+.navbar-content {
+    border-top: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between
+}
+
+.navbar-list {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start
+}
+
+.navbar-item {
+    margin-right: 30px
+}
+
+.navbar-item:last-child {
+    margin-right: 0px
+}
+
+.navbar-link {
+    padding: 22px 0px;
+    font-weight: 500;
+    color: var(--text);
+    text-transform: capitalize;
+    transition: all linear .3s;
+    -webkit-transition: all linear .3s;
+    -moz-transition: all linear .3s;
+    -ms-transition: all linear .3s;
+    -o-transition: all linear .3s
+}
+
+.navbar-link:hover {
+    color: var(--primary)
+}
+
+.navbar-focus-list {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end
+}
+
+.navbar-focus-list li {
+    margin-left: 30px
+}
+
+.navbar-focus-list li:first-child {
+    margin-left: 0px
+}
+
+.navbar-focus-list li a {
+    font-weight: 500;
+    color: var(--text);
+    text-transform: capitalize;
+    transition: all linear .3s;
+    -webkit-transition: all linear .3s;
+    -moz-transition: all linear .3s;
+    -ms-transition: all linear .3s;
+    -o-transition: all linear .3s
+}
+
+.navbar-focus-list li a:hover {
+    color: var(--primary)
+}
+
+.navbar-focus-list li a i {
+    font-size: 18px;
+    margin-right: 5px
+}
+
+.navbar-info-group {
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.navbar-info {
+    margin-right: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start
+}
+
+.navbar-info:last-child {
+    margin-right: 0px
+}
+
+.navbar-info i {
+    font-size: 30px;
+    margin-right: 15px;
+    color: var(--primary)
+}
+
+.navbar-info p small {
+    font-size: 14px;
+    line-height: 16px;
+    display: block;
+    text-align: left;
+    text-transform: capitalize
+}
+
+.navbar-info p span {
+    font-size: 15px;
+    font-weight: 500
+}
+
+@media (max-width: 991px) {
+    .navbar-part {
+        display: none
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .navbar-part .container-fluid {
+        padding: 0px 30px
+    }
+
+    .navbar-list li {
+        margin-right: 18px
+    }
+
+    .navbar-link {
+        font-size: 15px
+    }
+
+    .navbar-info {
+        margin-right: 15px
+    }
+
+    .navbar-info p span {
+        font-size: 14px
+    }
+
+    .navbar-info i {
+        margin-right: 10px
+    }
+}
+
+.dropdown-megamenu {
+    position: static
+}
+
+.dropdown-megamenu:hover .megamenu {
+    visibility: visible;
+    opacity: 1;
+    top: 200px
+}
+
+.megamenu {
+    position: absolute;
+    top: 155px;
+    left: 0px;
+    width: 100%;
+    z-index: 2;
+    visibility: hidden;
+    opacity: 0;
+    transition: all linear .3s;
+    -webkit-transition: all linear .3s;
+    -moz-transition: all linear .3s;
+    -ms-transition: all linear .3s;
+    -o-transition: all linear .3s
+}
+
+.megamenu .container {
+    padding: 30px 30px 0px;
+    border-radius: 8px;
+    background: var(--white);
+    border: 1px solid var(--border);
+    box-shadow: 0px 15px 35px 0px rgba(0, 0, 0, 0.1)
+}
+
+.megamenu-wrap {
+    margin-bottom: 30px
+}
+
+.megamenu-title {
+    padding-bottom: 18px;
+    margin-bottom: 20px;
+    position: relative;
+    text-transform: capitalize;
+    border-bottom: 1px solid var(--border)
+}
+
+.megamenu-title::before {
+    position: absolute;
+    content: "";
+    bottom: -2px;
+    left: 0px;
+    width: 50px;
+    height: 2px;
+    background: var(--primary)
+}
+
+.megamenu-list {
+    border-left: 1px solid var(--border)
+}
+
+.megamenu-list li a {
+    width: 100%;
+    border-radius: 5px;
+    padding: 5px 0px 5px 25px;
+    color: var(--text);
+    white-space: nowrap;
+    text-transform: capitalize;
+    transition: all linear .3s;
+    -webkit-transition: all linear .3s;
+    -moz-transition: all linear .3s;
+    -ms-transition: all linear .3s;
+    -o-transition: all linear .3s
+}
+
+.megamenu-list li a:hover {
+    color: var(--primary);
+    background: var(--chalk)
+}
+
+.megamenu-promo a img {
+    width: 100%;
+    border-radius: 3px
+}
+
+.dropdown-arrow {
+    position: relative;
+    padding-right: 18px !important
+}
+
+.dropdown-arrow:hover::before {
+    color: var(--primary)
+}
+
+.dropdown-arrow::before {
+    position: absolute;
+    content: "\ea99";
+    top: 50%;
+    right: 0px;
+    font-size: 15px;
+    line-height: 15px;
+    color: var(--text);
+    font-family: IcoFont;
+    transform: translateY(-25%);
+    transition: all linear .3s;
+    -webkit-transition: all linear .3s;
+    -moz-transition: all linear .3s;
+    -ms-transition: all linear .3s;
+    -o-transition: all linear .3s
+}
+
+.dropdown-link {
+    position: relative
+}
+
+.dropdown-link:hover::before {
+    color: var(--primary)
+}
+
+.dropdown-link::before {
+    position: absolute;
+    content: "\ea99";
+    top: 50%;
+    right: 0px;
+    font-size: 15px;
+    line-height: 15px;
+    color: var(--text);
+    font-family: IcoFont;
+    transform: translateY(-50%);
+    transition: all linear .3s;
+    -webkit-transition: all linear .3s;
+    -moz-transition: all linear .3s;
+    -ms-transition: all linear .3s;
+    -o-transition: all linear .3s
+}
+
+.dropdown-list {
+    display: none;
+    padding: 10px;
+    border-radius: 8px;
+    background: var(--white);
+    border: 1px solid var(--border);
+    box-shadow: 0px 15px 35px 0px rgba(0, 0, 0, 0.1);
+    transition: all linear .3s;
+    -webkit-transition: all linear .3s;
+    -moz-transition: all linear .3s;
+    -ms-transition: all linear .3s;
+    -o-transition: all linear .3s
+}
+
+.dropdown-list li a {
+    width: 100%;
+    font-size: 15px;
+    line-height: 18px;
+    border-radius: 8px;
+    padding: 10px 15px;
+    color: var(--text);
+    background: var(--white);
+    white-space: nowrap;
+    text-transform: capitalize;
+    transition: all linear .3s;
+    -webkit-transition: all linear .3s;
+    -moz-transition: all linear .3s;
+    -ms-transition: all linear .3s;
+    -o-transition: all linear .3s
+}
+
+.dropdown-list li a:hover {
+    color: var(--primary);
+    background: var(--chalk)
+}
+
+.dropdown:hover .dropdown-position-list {
+    visibility: visible;
+    opacity: 1;
+    top: 70px
+}
+
+.dropdown-position-list {
+    position: absolute;
+    top: 100px;
+    left: 0px;
+    z-index: 2;
+    width: 200px;
+    height: auto;
+    visibility: hidden;
+    opacity: 0;
+    padding: 10px;
+    border-radius: 8px;
+    background: var(--white);
+    border: 1px solid var(--border);
+    box-shadow: 0px 15px 35px 0px rgba(0, 0, 0, 0.1);
+    transition: all linear .3s;
+    -webkit-transition: all linear .3s;
+    -moz-transition: all linear .3s;
+    -ms-transition: all linear .3s;
+    -o-transition: all linear .3s
+}
+
+.dropdown-position-list::before {
+    position: absolute;
+    content: "";
+    z-index: -1;
+    top: -7px;
+    left: 12px;
+    width: 12px;
+    height: 12px;
+    border-radius: 3px;
+    transform: rotate(45deg);
+    background: var(--white);
+    border-top: 1px solid var(--border);
+    border-left: 1px solid var(--border)
+}
+
+.dropdown-position-list li a {
+    width: 100%;
+    font-size: 15px;
+    line-height: 18px;
+    border-radius: 8px;
+    padding: 8px 15px;
+    color: var(--text);
+    background: var(--white);
+    white-space: nowrap;
+    text-transform: capitalize;
+    transition: all linear .3s;
+    -webkit-transition: all linear .3s;
+    -moz-transition: all linear .3s;
+    -ms-transition: all linear .3s;
+    -o-transition: all linear .3s
+}
+
+.dropdown-position-list li a:hover {
+    color: var(--primary)
+}
+
+.dropdown-megamenu {
+    position: static
+}
+
+.dropdown-megamenu:hover .megamenu {
+    visibility: visible;
+    opacity: 1;
+    top: 158px
+}
+
+
