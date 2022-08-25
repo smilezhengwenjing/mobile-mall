@@ -1,4 +1,5 @@
-import React, { Component , Fragment } from 'react'
+import React, { Component , Fragment } from 'react';
+import "@/style/base/slider.scss";
 
 export default class index extends Component {
     render() {
@@ -25,7 +26,7 @@ export default class index extends Component {
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div>·
                     <div class="banner-part banner-2">
                         <div class="container">
                             <div class="row align-items-center">
