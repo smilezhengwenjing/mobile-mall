@@ -1,5 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import "@/assets/fonts/flaticon/flaticon.scss";
+import "@/assets/fonts/icofont/icofont.scss";
 // import { createRoot } from 'react-dom/client';
 import './index.css';
 // import 'antd/dist/antd.min.css';
