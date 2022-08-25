@@ -1,4 +1,12 @@
 import styled from 'styled-components';
+export const InputWrapper = styled.input`
+    width:200px;
+    border:1px solid #999;
+    border-radius:10px;
+    height:30px;
+`;
+
+
 export const BigPicWrapper = styled.div`
    width:100%;
    height:500px;
