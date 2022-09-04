@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mobilemall.mobilemall.mapper.UserAddressMapper">
+    <resultMap id="BaseResultMap" type="com.mobilemall.mobilemall.entity.UserAddress">
+        <id column="address_id" jdbcType="BIGINT" property="addressId"/>
+        <result column="user_id" jdbcType="BIGINT" property="userId"/>
+        <result column="user_name" jdbcType="VARCHAR" property="userName"/>
+        <result column="user_phone" jdbcType="VARCHAR" property="userPhone"/>
+        <result column="default_flag" jdbcType="TINYINT" property="defaultFlag"/>
+        <result column="province_name" jdbcType="VARCHAR" property="provinceName"/>
+        <result column="city_name" jdbcType="VARCHAR" property="cityName"/>
+        <result column="region_name" jdbcType="VARCHAR" property="regionName"/>
+        <result column="detail_address" jdbcType="VARCHAR" property="detailAddress"/>
+        <result column="is_deleted" jdbcType="TINYINT" property="isDeleted"/>
+        <result column="create_time" jdbcType="TIMESTAMP" property="createTime"/>
+        <result column="update_time" jdbcType="TIMESTAMP" property="updateTime"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        address_id, user_id, user_name, user_phone, default_flag, province_name, city_name,
+        region_name, detail_address, is_deleted, create_time, update_time
+    </sql>
+    <select id="selectByPrimaryKey" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from user_address
+        where address_id = #{addressId,jdbcType=BIGINT} and is_deleted = 0
+    </select>
+
+</mapper>

@@ -8,4 +8,5 @@ import java.util.List;
 @Repository
 public interface GoodsMapper {
      List<Goods> getGoodses(int type);
+
 }

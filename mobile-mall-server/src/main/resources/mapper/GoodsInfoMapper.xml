@@ -18,26 +18,38 @@
         <result column="update_user" jdbcType="INTEGER" property="updateUser"/>
         <result column="update_time" jdbcType="TIMESTAMP" property="updateTime"/>
     </resultMap>
+    <resultMap extends="BaseResultMap" id="ResultMapWithBLOBs" type="com.mobilemall.mobilemall.entity.GoodsInfo">
+        <result column="goods_detail_content" jdbcType="LONGVARCHAR" property="goodsDetailContent"/>
+    </resultMap>
     <sql id="Base_Column_List">
         goods_id, goods_name, goods_intro,goods_category_id, goods_cover_img, goods_carousel, original_price,
         selling_price, stock_num, tag, goods_sell_status, create_user, create_time, update_user,
         update_time
     </sql>
-    <select id="getGoodsInfo" parameterType="int"  resultMap="BaseResultMap" >
+    <sql id="Blob_Column_List">
+        goods_detail_content
+    </sql>
+    <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="ResultMapWithBLOBs">
+        select
+        <include refid="Base_Column_List"/>
+        ,
+        <include refid="Blob_Column_List"/>
+        from goods_info
+        where goods_id = #{goodsId,jdbcType=BIGINT}
+    </select>
+
+    <select id="selectByPrimaryKeys" resultMap="BaseResultMap">
         select
         <include refid="Base_Column_List"/>
         from goods_info
         where goods_id in
-         (select
-          goods_id
-          from goods
-          where is_deleted = 0 and config_type = #{type}
-          )
-    </select>
-    <select id="getSearchLists" parameterType="String"  resultMap="BaseResultMap" >
-        select
-        <include refid="Base_Column_List"/>
-        from goods_info
-        where goods_name like concat('%',#{keyWords},'%')
+        <foreach item="id" collection="list" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+        order by field(goods_id,
+        <foreach item="id" collection="list" separator=",">
+            #{id}
+        </foreach>
+        );
     </select>
 </mapper>

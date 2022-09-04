@@ -2,18 +2,18 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.mobilemall.mobilemall.mapper.GoodsMapper">
     <resultMap id="BaseResultMap" type="com.mobilemall.mobilemall.entity.Goods">
-    <id column="config_id" jdbcType="BIGINT" property="configId"/>
-    <result column="config_name" jdbcType="VARCHAR" property="configName"/>
-    <result column="config_type" jdbcType="TINYINT" property="configType"/>
-    <result column="goods_id" jdbcType="BIGINT" property="goodsId"/>
-    <result column="redirect_url" jdbcType="VARCHAR" property="redirectUrl"/>
-    <result column="config_rank" jdbcType="INTEGER" property="configRank"/>
-    <result column="is_deleted" jdbcType="TINYINT" property="isDeleted"/>
-    <result column="create_time" jdbcType="TIMESTAMP" property="createTime"/>
-    <result column="create_user" jdbcType="INTEGER" property="createUser"/>
-    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime"/>
-    <result column="update_user" jdbcType="INTEGER" property="updateUser"/>
-</resultMap>
+        <id column="config_id" jdbcType="BIGINT" property="configId"/>
+        <result column="config_name" jdbcType="VARCHAR" property="configName"/>
+        <result column="config_type" jdbcType="TINYINT" property="configType"/>
+        <result column="goods_id" jdbcType="BIGINT" property="goodsId"/>
+        <result column="redirect_url" jdbcType="VARCHAR" property="redirectUrl"/>
+        <result column="config_rank" jdbcType="INTEGER" property="configRank"/>
+        <result column="is_deleted" jdbcType="TINYINT" property="isDeleted"/>
+        <result column="create_time" jdbcType="TIMESTAMP" property="createTime"/>
+        <result column="create_user" jdbcType="INTEGER" property="createUser"/>
+        <result column="update_time" jdbcType="TIMESTAMP" property="updateTime"/>
+        <result column="update_user" jdbcType="INTEGER" property="updateUser"/>
+    </resultMap>
     <resultMap id="BaseResultMap1" type="com.mobilemall.mobilemall.entity.Goods">
         <result column="goods_id" jdbcType="BIGINT" property="goodsId"/>
     </resultMap>

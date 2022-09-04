@@ -10,4 +10,6 @@ import java.util.List;
 public interface GoodsInfoMapper {
     List<GoodsInfo> getGoodsInfo(int type);
     List<GoodsInfo> getSearchLists(String keyWords);
+    GoodsInfo selectByPrimaryKey(Long goodsId);
+    List<GoodsInfo> selectByPrimaryKeys(List<Long> goodsIds);
 }
