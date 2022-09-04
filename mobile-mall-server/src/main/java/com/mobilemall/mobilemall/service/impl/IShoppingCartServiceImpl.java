@@ -95,7 +95,7 @@ public class IShoppingCartServiceImpl implements ShoppingCartService {
             List<Long> goodsIds = shoppingCartItems.stream().map(ShoppingCartItem::getGoodsId).collect(Collectors.toList());
             List<GoodsInfo> goods = goodsInfoMapper.selectByPrimaryKeys(goodsIds);
             Map<Long, GoodsInfo> goodsMap = new HashMap<>();
-            if (!CollectionUtils.isEmpty(goodsMap)) {
+            if (CollectionUtils.isEmpty(goodsMap)) {
                 goodsMap = goods.stream().collect(Collectors.toMap(GoodsInfo::getGoodsId, Function.identity(), (entity1, entity2) -> entity1));
             }
             for (ShoppingCartItem shoppingCartItem : shoppingCartItems) {

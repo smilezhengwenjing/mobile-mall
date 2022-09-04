@@ -18,9 +18,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 @RestController
 @RequestMapping("/order")
@@ -58,7 +56,9 @@ public class OrderController {
             UserAddress userAddress = userAddressService.getUserAddressById(saveOrderParam.getAddressId());
             //保存订单并返回订单号
             String saveOrderResult = orderService.saveOrder(saveOrderParam.getUserId(),userAddress, itemsForSave);
-            Result result = ResultGenerator.genSuccessResult(saveOrderResult);
+            Map<String, Object> map = new HashMap<String, Object>();
+            map.put("orderNo",saveOrderResult);
+            Result result = ResultGenerator.genSuccessResult(map);
             return result;
         }
       return ResultGenerator.genFailResult("生成订单失败");

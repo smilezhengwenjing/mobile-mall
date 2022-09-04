@@ -44,8 +44,10 @@ public class IOrderServiceImpl implements OrderService {
         order.setTotalPrice(priceTotal);
         String extraInfo = "";
         order.setExtraInfo(extraInfo);
+        System.out.println("---------------"+order);
         //生成订单项并保存订单项记录
        if(orderMapper.insertSelective(order)>0){
+           System.out.println("--------"+order);
            //生成收货地址快照，并保存到数据库
            OrderAddress orderAddress = new OrderAddress();
            BeanUtil.copyProperties(userAddress,orderAddress);
@@ -61,6 +63,8 @@ public class IOrderServiceImpl implements OrderService {
                orderItems.add(orderItem);
            }
            //保存至数据库
+           System.out.println("---------------"+orderItems);
+           System.out.println("---------------"+orderAddress);
            if (orderItemMapper.insertBatch(orderItems) > 0 && orderAddressMapper.insertSelective(orderAddress) > 0) {
                //所有操作成功后，将订单号返回，以供Controller方法跳转到订单详情
                return orderNo;

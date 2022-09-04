@@ -14,7 +14,7 @@
         order_id, user_name, user_phone, province_name, city_name, region_name, detail_address
     </sql>
     <insert id="insertSelective" parameterType="com.mobilemall.mobilemall.entity.OrderAddress">
-        insert into tb_newbee_mall_order_address
+        insert into order_address
         <trim prefix="(" suffix=")" suffixOverrides=",">
             <if test="orderId != null">
                 order_id,
