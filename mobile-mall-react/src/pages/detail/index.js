@@ -1,5 +1,7 @@
 import React, { PureComponent } from 'react';
 import logo from '@/assets/images/product.jpg';
+import Header from "@/pages/Home/components/header";
+import Navbar from "@/pages/Home/components/navbar";
 // import { post } from "@/utils/request";
 import { BigPicWrapper,SmallPicWrapper,DetailWrapper } from './style';
 export default class Detail extends PureComponent {
@@ -18,6 +20,8 @@ export default class Detail extends PureComponent {
     render() {
         return (
             <div>
+                <Header/>
+                <Navbar/>
                 <div className='container'>
                     <div className='row'>
                         {/*左侧图片区域*/}
